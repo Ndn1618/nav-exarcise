@@ -2,7 +2,7 @@ var navElements = ['home', 'about', 'work process'];
 var elAddBtn = document.querySelector('.menu-trigger');
 var elModalTemplate = document.querySelector('#modal-template').content;
 
-var onButtonClick = (array) => {
+var onButtonClick = () => {
   var elModal = elModalTemplate.cloneNode(true);
 
   var modalBg = elModal.querySelector('.modal-bg');
@@ -18,9 +18,9 @@ var onButtonClick = (array) => {
     evt.preventDefault();
     var modalInput = modalForm.querySelector('.new-nav-text-input');
     var inputText = modalInput.value.trim();
-    array.push(inputText);
+    navElements.push(inputText);
 
-    addNewNavEl(array);
+    addNewNavEl(navElements);
 
     modalBg.classList.remove('bg-active');
     modalInput.value = '';
@@ -29,4 +29,4 @@ var onButtonClick = (array) => {
   document.body.appendChild(modalBg);
 }
 
-elAddBtn.addEventListener('click', onButtonClick.bind(null, navElements));
+elAddBtn.addEventListener('click', onButtonClick);
