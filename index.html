@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nav exersice</title>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+  <header class="header-area header-sticky">
+    <div class="container">
+      <nav class="main-nav">
+        <a href="#" class="logo">
+          <img class="logo-img" src="img/logo.png" alt="Softy Pinko" width="160" height="30" />
+        </a>
+        <ul class="nav"></ul>
+        <button class='menu-trigger'>
+          <span>Add</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MODALS -->
+
+  <template id="modal-template">
+    <div class="modal-bg" id="exampleModal" tabindex="-1" aria-labelledby="NavModalLabel">
+      <div class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLabel">Create new navigation list item</h4>
+            <button type="button" class="modal-close" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="add-nav-form" action="https://echo.htmlacademy.ru" method="GET">
+              <input class="new-nav-text-input" type="text" placeholder="Enter here..." name="nav-item-name" required>
+              <button class="add-nav-button" type="submit">Add</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script src="js/modal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
